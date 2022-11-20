@@ -5,6 +5,7 @@ import org.javatuples.Pair;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.stream.Collectors;
 
 /**
@@ -49,9 +50,31 @@ public class Rifle {
      * @param rifles винтовки.
      * @return список названий винтовок и их стран-производителей
      */
-    static ArrayList<Pair<String, String>> getRiflesNameAndCountry(ArrayList<Rifle> rifles) {
+    static ArrayList<Pair<String, String>> getRiflesNameAndCountry(@NotNull ArrayList<Rifle> rifles) {
         return rifles.stream()
                 .map(rifle -> new Pair<>(rifle.name, rifle.country))
+                .collect(Collectors.toCollection(ArrayList::new));
+    }
+
+    /**
+     * Получение отстортированных винтовок по калибру.
+     * @param rifles винтовки.
+     * @return отстортированные винтовки по калибру.
+     */
+    static ArrayList<Pistol> getSortedByCalibre(@NotNull ArrayList<Pistol> rifles) {
+        return rifles.stream()
+                .sorted(Comparator.comparingDouble(Pistol::getCalibre))
+                .collect(Collectors.toCollection(ArrayList::new));
+    }
+
+    /**
+     * Получение отстортированных винтовок по калибру.
+     * @param rifles винтовки.
+     * @return отстортированные винтовки по калибру.
+     */
+    static ArrayList<Pistol> getSortedByMagazine(@NotNull ArrayList<Pistol> rifles) {
+        return rifles.stream()
+                .sorted(Comparator.comparingInt(Pistol::getMagazine))
                 .collect(Collectors.toCollection(ArrayList::new));
     }
 }
