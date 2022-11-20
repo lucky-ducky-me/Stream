@@ -61,9 +61,9 @@ public class Rifle {
      * @param rifles винтовки.
      * @return отстортированные винтовки по калибру.
      */
-    static ArrayList<Pistol> getSortedByCalibre(@NotNull ArrayList<Pistol> rifles) {
+    static ArrayList<Rifle> getSortedByCalibre(@NotNull ArrayList<Rifle> rifles) {
         return rifles.stream()
-                .sorted(Comparator.comparingDouble(Pistol::getCalibre))
+                .sorted(Comparator.comparingDouble(Rifle::getCalibre))
                 .collect(Collectors.toCollection(ArrayList::new));
     }
 
@@ -72,9 +72,26 @@ public class Rifle {
      * @param rifles винтовки.
      * @return отстортированные винтовки по калибру.
      */
-    static ArrayList<Pistol> getSortedByMagazine(@NotNull ArrayList<Pistol> rifles) {
+    static ArrayList<Rifle> getSortedByMagazine(@NotNull ArrayList<Rifle> rifles) {
         return rifles.stream()
-                .sorted(Comparator.comparingInt(Pistol::getMagazine))
+                .sorted(Comparator.comparingInt(Rifle::getMagazine))
                 .collect(Collectors.toCollection(ArrayList::new));
+    }
+
+    /**
+     * Вывод винтовок в консоль.
+     * @param rifles винтовки.
+     */
+    static void printPistolsInConsole(@NotNull ArrayList<Pistol> rifles) {
+        rifles.forEach(rifle -> {
+            System.out.println(String.format("Навзвание: %s\n" +
+                            "Страна производитель: %s\n" +
+                            "Калибр: %s\n" +
+                            "Ёмкость магазина: %s\n"
+                    , rifle.getName()
+                    , rifle.getCountry()
+                    , rifle.getCalibre()
+                    , rifle.getMagazine()));
+        });
     }
 }

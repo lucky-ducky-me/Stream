@@ -77,4 +77,21 @@ public class Pistol {
                 .sorted(Comparator.comparingInt(Pistol::getMagazine))
                 .collect(Collectors.toCollection(ArrayList::new));
     }
+
+    /**
+     * Вывод пистолетов в консоль.
+     * @param pistols пистолеты.
+     */
+    static void printPistolsInConsole(@NotNull ArrayList<Pistol> pistols) {
+        pistols.forEach(pistol -> {
+            System.out.println(String.format("Навзвание: %s\n" +
+                        "Страна производитель: %s\n" +
+                        "Калибр: %s\n" +
+                        "Ёмкость магазина: %s\n"
+                    , pistol.getName()
+                    , pistol.getCountry()
+                    , pistol.getCalibre()
+                    , pistol.getMagazine()));
+        });
+    }
 }
