@@ -1,6 +1,7 @@
 package Weapon;
 
 import lombok.Data;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.stream.Collectors;
@@ -29,4 +30,16 @@ public class Pistol {
      * Ёмкость магазина.
      */
     int magazine;
+
+    /**
+     * Получение пистолетов из указанной стран.
+     * @param pistols пистолеты.
+     * @param country указанная страна.
+     * @return пистолеты из указанной страны.
+     */
+    static ArrayList<Pistol> GetPistolsFrom(@NotNull ArrayList<Pistol> pistols, @NotNull String country) {
+        return pistols.stream()
+                .filter(pistol -> pistol.getCountry().equals(country))
+                .collect(Collectors.toCollection(ArrayList::new));
+    }
 }
