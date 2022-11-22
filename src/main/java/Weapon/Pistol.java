@@ -39,7 +39,7 @@ public class Pistol {
      * @param country указанная страна.
      * @return пистолеты из указанной страны.
      */
-    static ArrayList<Pistol> getPistolsFrom(@NotNull ArrayList<Pistol> pistols, @NotNull String country) {
+    public static ArrayList<Pistol> getPistolsFrom(@NotNull ArrayList<Pistol> pistols, @NotNull String country) {
         return pistols.stream()
                 .filter(pistol -> pistol.getCountry().equals(country))
                 .collect(Collectors.toCollection(ArrayList::new));
@@ -50,7 +50,7 @@ public class Pistol {
      * @param pistols пистолеты.
      * @return список названий пистолетов и их стран-производителей
      */
-    static ArrayList<Pair<String, String>> getPistolsNameAndCountry(@NotNull ArrayList<Pistol> pistols) {
+    public static ArrayList<Pair<String, String>> getPistolsNameAndCountry(@NotNull ArrayList<Pistol> pistols) {
         return pistols.stream()
                 .map(pistol -> new Pair<>(pistol.name, pistol.country))
                 .collect(Collectors.toCollection(ArrayList::new));
@@ -61,7 +61,7 @@ public class Pistol {
      * @param pistols пистолеты.
      * @return отстортированные пистолеты по калибру.
      */
-    static ArrayList<Pistol> getSortedByCalibre(@NotNull ArrayList<Pistol> pistols) {
+    public static ArrayList<Pistol> getSortedByCalibre(@NotNull ArrayList<Pistol> pistols) {
          return pistols.stream()
                  .sorted(Comparator.comparingDouble(Pistol::getCalibre))
                  .collect(Collectors.toCollection(ArrayList::new));
@@ -72,7 +72,7 @@ public class Pistol {
      * @param pistols пистолеты.
      * @return отстортированные пистолеты по ёмкости магазина.
      */
-    static ArrayList<Pistol> getSortedByMagazine(@NotNull ArrayList<Pistol> pistols) {
+    public static ArrayList<Pistol> getSortedByMagazine(@NotNull ArrayList<Pistol> pistols) {
         return pistols.stream()
                 .sorted(Comparator.comparingInt(Pistol::getMagazine))
                 .collect(Collectors.toCollection(ArrayList::new));
@@ -82,16 +82,19 @@ public class Pistol {
      * Вывод пистолетов в консоль.
      * @param pistols пистолеты.
      */
-    static void printPistolsInConsole(@NotNull ArrayList<Pistol> pistols) {
-        pistols.forEach(pistol -> {
-            System.out.println(String.format("Навзвание: %s\n" +
+    public static void printPistolsInConsole(@NotNull ArrayList<Pistol> pistols) {
+        pistols.forEach(System.out::println);
+    }
+
+    @Override
+    public String toString() {
+        return String.format("Навзвание: %s\n" +
                         "Страна производитель: %s\n" +
                         "Калибр: %s\n" +
                         "Ёмкость магазина: %s\n"
-                    , pistol.getName()
-                    , pistol.getCountry()
-                    , pistol.getCalibre()
-                    , pistol.getMagazine()));
-        });
+                , getName()
+                , getCountry()
+                , getCalibre()
+                , getMagazine());
     }
 }

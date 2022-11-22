@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0876b1d9-b9c7-4e1d-8331-4c060d1be730" name="Changes" comment="Добавлены методы с применением sorted.">
+    <list default="true" id="0876b1d9-b9c7-4e1d-8331-4c060d1be730" name="Changes" comment="Добавлены методы с применением forEach.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Weapon/Pistol.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Weapon/Pistol.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Weapon/Rifle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Weapon/Rifle.java" afterDir="false" />
     </list>
@@ -33,15 +34,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "E:/3 курс/Firstpart/java/Vyatsu.Fib.Ovchinnikov.Stream/src/main/resources"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/3 курс/Firstpart/java/Vyatsu.Fib.Ovchinnikov.Stream/src/main/resources&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\3 курс\Firstpart\java\Vyatsu.Fib.Ovchinnikov.Stream\src\main\resources" />
@@ -62,7 +63,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1668942050725</updated>
-      <workItem from="1668942051964" duration="5335000" />
+      <workItem from="1668942051964" duration="6054000" />
+      <workItem from="1669126166464" duration="817000" />
     </task>
     <task id="LOCAL-00001" summary="Инициализация проекта.">
       <created>1668943384662</created>
@@ -92,7 +94,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668946517102</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Добавлены методы с применением forEach.">
+      <created>1668948879355</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1668948879355</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -114,6 +123,7 @@
     <MESSAGE value="Добавлены методы с применением filter." />
     <MESSAGE value="Добавлены методы с применением map." />
     <MESSAGE value="Добавлены методы с применением sorted." />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлены методы с применением sorted." />
+    <MESSAGE value="Добавлены методы с применением forEach." />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлены методы с применением forEach." />
   </component>
 </project>
