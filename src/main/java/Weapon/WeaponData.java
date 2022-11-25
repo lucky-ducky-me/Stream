@@ -19,8 +19,12 @@ public class  WeaponData {
      */
     ArrayList<Rifle> rifles;
 
-    public void WeaponData(ArrayList<Pistol> pistols, ArrayList<Rifle> rifles) {
+    public WeaponData(ArrayList<Pistol> pistols, ArrayList<Rifle> rifles) {
         this.pistols = new ArrayList<>(pistols);
         this.rifles = new ArrayList<>(rifles);
+    }
+
+    public WeaponData() {
+
     }
 }
